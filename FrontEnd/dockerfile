@@ -1,0 +1,11 @@
+FROM node:16
+WORKDIR /usr/src/app
+COPY package*.json ./
+RUN npm install
+EXPOSE 8080
+CMD ["node", "server.js"]
+
+
+
+#docker build . -t mahendra1904/node-app    //// build docker image
+#docker run -p 8080:8080 -d mahendra/node-app  ///// run docker image and make container
